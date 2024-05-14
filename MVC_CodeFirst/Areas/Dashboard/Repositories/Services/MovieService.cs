@@ -7,10 +7,6 @@ namespace MVC_CodeFirst.Areas.Dashboard.Repositories.Services
     public class MovieService : IMovieService
     {
         private MovieProjectContext _projectContext = new MovieProjectContext();
-        //public MovieService(MovieProjectContext movieProjectContext)
-        //{
-        //    _projectContext = movieProjectContext;
-        //}
 
         public void CreateMovie(Movie movie)
         {
