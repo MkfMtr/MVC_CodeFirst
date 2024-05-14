@@ -20,5 +20,11 @@ namespace MVC_CodeFirst.Areas.Dashboard.Repositories.Services
                 throw;
             }
         }
+
+        public List<Movie> ListMovies()
+        {
+            List<Movie> moviesList = _projectContext.Movies.ToList();
+            return moviesList;
+        }
     }
 }

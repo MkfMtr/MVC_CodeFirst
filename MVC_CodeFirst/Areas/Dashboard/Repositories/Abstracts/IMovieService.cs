@@ -4,5 +4,7 @@ namespace MVC_CodeFirst.Areas.Dashboard.Repositories.Abstracts
     public interface IMovieService
     {
         void CreateMovie(Movie movie);
+
+        List<Movie> ListMovies();
     }
 }

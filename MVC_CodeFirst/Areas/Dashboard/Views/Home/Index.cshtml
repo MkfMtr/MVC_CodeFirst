@@ -1,4 +1,4 @@
-﻿
+﻿@model List<Movie>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Dashboard/Views/Shared/_DashboardLayout.cshtml";
@@ -111,16 +111,15 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Movie 1</td>
-                                    <td>Lorem ipsum</td>
-                                    <td>Director 1</td>
-                                    <td>
-                                        <a class="btn btn-sm btn-warning">Update</a>
-                                        <a class="btn btn-sm btn-danger">Delete</a>
-                                    </td>
-                                </tr>
+                                @foreach (var movie in Model)
+                                {
+                                    <tr>
+                                        <td>@movie.ID</td>
+                                        <td>@movie.Title</td>
+                                        <td>@movie.Description</td>
+                                        <td>@movie.DirectorId</td>
+                                    </tr>
+                                }
                             </tbody>
                         </table>
                     </div>
